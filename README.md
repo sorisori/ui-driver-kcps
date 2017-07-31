@@ -1,5 +1,5 @@
-# ui-driver-skel
-Skeleton Rancher UI driver for custom docker-machine drivers
+# ui-driver-kcps
+KCPS Rancher UI driver for custom docker-machine drivers
 
 ## Setup
 
