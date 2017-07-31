@@ -9,8 +9,17 @@ define('ui/components/machine/driver-%%DRIVERNAME%%/component', ['exports', 'emb
     // Write your component here, starting with setting 'model' to a machine with your config populated
     bootstrap: function() {
       let config = this.get('store').createRecord({
-        type        : '%%DRIVERNAME%%Config',
-        size        : 512,
+        type         : '%%DRIVERNAME%%Config',
+        apiKey      : '',
+        apiUrl      : '',
+        secretKey   : '',
+        ingressCidr : '0.0.0.0/0',
+        network      : 'PublicFrontSegment',
+        serviceOffering : 'Medium2(2vCPU,Mem8GB)',
+        sshPort     : '22',
+        sshUser     : 'ubuntu',
+        template     : 'Ubuntu16.04',
+        zone         : '',
       });
 
       let type = 'host';

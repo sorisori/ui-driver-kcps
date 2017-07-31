@@ -4,21 +4,131 @@
     {{partial "host/add-common"}}
 
     <div class="over-hr r-mt20 r-mb20">
-      <span>My Skeleton Driver</span>
+      <span>ACCOUNT ACCESS</span>
     </div>
 
-    {{!-- An example input option --}}
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Size</label>
+    <div class="row form-group">
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">API URL</label>
       </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-md-10">
+        {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.apiUrl
+        }}
+      </div>
+
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">API Key</label>
+      </div>
+      <div class="col-md-10">
+        {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.apiKey
+        }}
+      </div>
+
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Secret Key</label>
+      </div>
+      <div class="col-md-10">
+        {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.secretKey
+        }}
+      </div>
+    </div>
+
+
+
+
+
+    <div class="over-hr r-mt20 r-mb20">
+      <span>Instance</span>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Ingress CIDR</label>
+      </div>
+      <div class="col-md-4">
         <div class="input-group">
           {{input type="text"
             class="form-control"
-            value=model.%%DRIVERNAME%%Config.size
+            value=model.%%DRIVERNAME%%Config.ingressCidr
           }}
-          <span class="input-group-addon">MB</span>
+        </div>
+      </div>
+
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Network Name</label>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.network
+          }}
+        </div>
+      </div>
+
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Service Offering</label>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.serviceOffering
+          }}
+        </div>
+      </div>
+
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">SSH User Name</label>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.sshUser
+          }}
+        </div>
+      </div>
+
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">SSH Port</label>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.sshPort
+          }}
+        </div>
+      </div>
+
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Template Name</label>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.template
+          }}
+        </div>
+      </div>
+
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Zone</label>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.zone
+          }}
         </div>
       </div>
     </div>
