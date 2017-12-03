@@ -2,6 +2,8 @@ pipeline:
   build:
     image: node:4.8.2-alpine
     commands:
+      - apk update
+      - apk add git
       - npm install -g bower
       - npm install
       - bower install --allow-root
