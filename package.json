@@ -1,15 +1,15 @@
 {
   "name": "ui-driver-kcps",
-  "version": "0.0.1",
-  "description": "Skeleton Rancher UI driver for custom docker-machine drivers",
+  "version": "0.1.0",
+  "description": "Rancher UI driver for kcps docker-machine drivers",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sorisori/ui-driver-kcps.git"
+    "url": "git+https://github.com/uesyn/ui-driver-kcps.git"
   },
   "author": "Rancher Labs, Inc.",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/sorisori/ui-driver-kcps/issues"
+    "url": "https://github.com/uesyn/ui-driver-kcps/issues"
   },
   "scripts": {
     "start": "./node_modules/.bin/gulp server",
@@ -17,7 +17,7 @@
     "build": "./node_modules/.bin/gulp build",
     "upload": "./scripts/upload"
   },
-  "homepage": "https://github.com/sorisori/ui-driver-kcps#readme",
+  "homepage": "https://github.com/uesyn/ui-driver-kcps#readme",
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.1",

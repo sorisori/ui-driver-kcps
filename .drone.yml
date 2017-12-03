@@ -1,0 +1,16 @@
+pipeline:
+  build:
+    image: node:4.8.2-alpine
+    commands:
+      - npm install -g bower
+      - npm install
+      - bower install --allow-root
+      - npm run build
+
+  s3:
+    image: plugins/s3
+    bucket: kcpsui
+    secrets: [ aws_access_key_id, aws_secret_access_key ]
+    source: dist/*
+    path_style: true
+    endpoint: http://droneci.caaspoc.aws.kddi.com:9001
